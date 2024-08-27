@@ -24,7 +24,7 @@ const about = {
     },
     {
       fieldName: "Phone",
-      fieldValue: "+923066039949",
+      fieldValue: "+92-3066-039949",
     },
     {
       fieldName: "Experience",
@@ -48,7 +48,7 @@ const about = {
     },
     {
       fieldName: "Langauges",
-      fieldValue: "Urdu, English",
+      fieldValue: "Urdu,English,Punjabi",
     },
   ]
 }

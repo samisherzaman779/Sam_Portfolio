@@ -10,25 +10,25 @@ const services = [
   {
     num: '01',
     title: "Web Development",
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'I offer comprehensive web development services, from creating visually appealing websites to building robust, full-stack applications. My expertise includes responsive design, efficient coding practices, and seamless integration of front-end and back-end technologies to deliver a user-friendly and impactful web experience.',
     href: ''
   },
   {
     num: '02',
     title: "UI/UX Design",
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'I specialize in crafting intuitive and engaging user interfaces that enhance user experience. My approach combines aesthetic design with user-centered principles to create visually appealing and functional designs that meet your project’s needs.',
     href: ''
   },
   {
     num: '03',
     title: "Logo Design",
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'I create unique and memorable logos that effectively represent your brand’s identity. My designs focus on blending creativity with strategic thinking to deliver a logo that stands out and communicates your brand’s essence..',
     href: ''
   },
   {
     num: '04',
     title: "SEO",
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'I provide tailored SEO strategies to enhance your website’s visibility and search engine ranking. My approach includes keyword research, on-page optimization, and performance tracking to drive organic traffic and improve your online presence.',
     href: ''
   },
 ];

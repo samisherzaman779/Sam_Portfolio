@@ -15,9 +15,9 @@ const projects = [
     num: '01',
     category: 'frontend',
     title: 'project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid totam eligendi,',
+    description: "This Amazon clone, built with HTML and CSS, replicates the original site's key sections. It showcases my ability to create clean, responsive designs while closely mirroring Amazon's layout.",
     stack: [{ name: "Html 5" }, { name: "Css 3"}],
-    Image: "/assets/amazon1.jpg",
+    Image: "/amazon1.jpg",
     github: "https://github.com/samikhan1622/Amazon-Clone",
     live: "",
   },
@@ -25,31 +25,31 @@ const projects = [
     num: '02',
     category: 'fullstack',
     title: 'project 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid totam eligendi,',
+    description: "A full-stack Todo app built with MongoDB, where users can add tasks that are seamlessly saved in the database. This project demonstrates my ability to integrate front-end and back-end technologies, ensuring data persistence and a smooth user experience.",
     stack: [{ name: "Next.JS" }, { name: "Tailwind.css" }, { name: "Typescript"}, { name: "Node.JS" }, ],
-    Image: "/assets/todo1.jpg",
+    Image: "/todo1.jpg",
     github: "https://github.com/samikhan1622/ToDo-App",
-    live: ""
+    live: "https://to-do-app-fa1u.vercel.app/"
   },
   {
     num: '03',
     category: 'fullstack',
     title: 'project 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid totam eligendi,',
-    stack: [{ name: "Next.JS" }, { name: "Typescript",}, { name: "Tailwind.css" }, { name: "Node.JS" }, ],
-    Image: "/assets/store1.jpg",
-    github: "https://github.com/samikhan1622/samstore",
+    description: 'This portfolio showcases my work as a web developer, featuring projects that demonstrate my skills in front-end and back-end development. It highlights my ability to create responsive designs, build full-stack applications, and solve complex problems with clean, efficient code.',
+    stack: [{ name: "Typescript"}, { name: "Tailwind.css" }, { name: "Next.JS" },  { name: "Node.JS" }, ],
+    Image: "/portfolio1.jpg",
     live: "",
+    github: ""
   },
   {
     num: '04',
     category: 'fullstack',
     title: 'project 4',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid totam eligendi,',
-    stack: [{ name: "Typescript"}, { name: "Tailwind.css" }, { name: "Next.JS" },  { name: "Node.JS" }, ],
-    Image: "/assets/portfolio1.png",
-    live: "",
-    github: ""
+    description: 'A dynamic e-commerce platform built with PostgreSQL, featuring secure user authentication, seamless product management, and efficient order processing. This project highlights my expertise in database integration, ensuring data integrity and a smooth shopping experience.',
+    stack: [{ name: "Next.JS" }, { name: "Typescript",}, { name: "Tailwind.css" }, { name: "Node.JS" }, ],
+    Image: "/store1.jpg",
+    github: "https://github.com/samikhan1622/samstore",
+    live: "https://samstore-peach.vercel.app/",
   },
 ];
 
@@ -88,7 +88,7 @@ const Work = () => {
               </ul> 
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-                <Link href={projectt.live}>
+                <Link href={projectt.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -100,7 +100,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={projectt.github}>
+                <Link href={projectt.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">

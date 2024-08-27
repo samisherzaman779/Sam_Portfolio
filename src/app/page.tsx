@@ -8,6 +8,7 @@ import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import NameWritter from "@/components/NameWritter";
+import Link from "next/link";
 
 const page = () => {
     return (
@@ -17,12 +18,12 @@ const page = () => {
                     {/* text */}
                     <div className="text-center xl:text-left order-2 xl:order-none">
                         <NameWritter />
-                        
                         <p className="max-w-[500px] mb-9 text-white/80">
                             Crafting efficient code and innovative solutions, I am a software developer dedicated to turning ideas into impactful digital experiences.
                         </p>
                         {/* btn & socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
+                            <Link href={"/"}>
                             <Button
                                 variant={"outline"}
                                 size={"lg"}
@@ -30,6 +31,7 @@ const page = () => {
                                 <span>Download CV</span>
                                 <FiDownload className="text-xl" />
                             </Button>
+                            </Link>
                             <div className="mb-8 xl:mb-0">
                                 <Socials
                                     containerStyles="flex gap-6"

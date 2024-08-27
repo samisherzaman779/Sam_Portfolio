@@ -26,4 +26,4 @@ const StairTransitions = () => {
   )
 }
 
-export default StairTransitions
+export default StairTransitions;

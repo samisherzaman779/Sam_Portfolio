@@ -34,7 +34,6 @@ import { title } from "process";
  ];
 
  import { motion } from "framer-motion";
-import { Item } from "@radix-ui/react-select";
 
 
 const Contact = () => {
@@ -53,7 +52,7 @@ const Contact = () => {
                 <h3 className="text-4xl text-accent">
                 let's work together
               </h3>
-              <p className="text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas labore ipsum deleniti recusandae maiores quas?</p>
+              <p className="text-white/60">Thank you for visiting my portfolio! I'm always excited to collaborate on new projects, share ideas, or simply have a conversation. Whether you have a question, a project in mind, or just want to say hello, feel free to reach out. I'll get back to you as soon as possible.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="FirstName" />
                 <Input type="lastname" placeholder="LastName" />
