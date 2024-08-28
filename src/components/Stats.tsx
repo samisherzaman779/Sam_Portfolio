@@ -1,6 +1,5 @@
 "use client";
 
-import { Item } from "@radix-ui/react-select";
 import Countup from "react-countup";
 
 const statss = [
