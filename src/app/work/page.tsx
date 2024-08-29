@@ -141,8 +141,8 @@ const Work: React.FC = () => {
                 </SwiperSlide>
               ))}
               <WorkSliderBtn 
-                containerStyle="flex gap-2 absolute right-0 bottom-4 xl:bottom-0 z-20 w-full justify-center xl:w-auto xl:justify-start"
-                btnStyle="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-between transition-all"
+                containerStyle="flex gap-2 absolute right-0 bottom-4 xl:bottom-0 z-20 w-full justify-between xl:w-auto xl:justify-start"
+                btnStyle="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center transition-all"
               />
             </Swiper>
           </div>
