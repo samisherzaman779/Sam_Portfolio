@@ -19,7 +19,7 @@ import {
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "+923-066039949"
+    description: "+923-0660-39949"
   },
   {
     icon: <FaEnvelope />,
