@@ -83,7 +83,7 @@ const Contact = () => {
                 placeholder="Type your massage here."
                 />
                 {/* button */}
-                <Button size="md" className="max-w-40 text-center"> <p className="text-center">Send massage</p></Button>
+                <Button size="md" className="max-w-40 text-center">Send massage</Button>
               </form>
             </div>
             {/* info */}
