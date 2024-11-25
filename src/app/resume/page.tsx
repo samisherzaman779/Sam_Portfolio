@@ -94,6 +94,11 @@ const experience = {
       position: "Full Stack Develpor",
       duration: "2024 - Present",
     },
+    {
+      company: "Fiverr & Upwork",
+      position: "Freelancing",
+      duration: "2024 - Present",
+    },
   ],
 };
 
@@ -102,7 +107,7 @@ const Education = {
   Icon: "/assets/Resume.jpg",
   title: "My Education",
   Description:
-    "I completed my basic education at AlHidaya School, where I developed a strong understanding of foundational subjects. After that, I began focusing on web development and software technologies through self-study and online courses. Currently, I am a web developer, continuously enhancing my skills in the field of software development.",
+    "I completed my basic education at AlHidaya School, where I developed a strong understanding of foundational subjects. After that, I began focusing on web development and software technologies through self-study and online courses. Currently, I am a web developer, continuously enhancing my skills in the field of software development & Artifical Inteligence.",
   items: [
     {
       institution: "Piaic",

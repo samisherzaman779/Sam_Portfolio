@@ -31,6 +31,30 @@ const services = [
     description: 'I provide tailored SEO strategies to enhance your website’s visibility and search engine ranking. My approach includes keyword research, on-page optimization, and performance tracking to drive organic traffic and improve your online presence.',
     href: ''
   },
+  {
+    num: '05',
+    title: "Web Scraping",
+    description: 'I provide efficient and reliable web scraping services to extract and deliver structured data from websites. Whether for market research, e-commerce, or data analysis, my custom solutions ensure accurate and timely results tailored to your needs.',
+    href: ''
+  },
+  {
+    num: '06',
+    title: "AI Solutions",
+    description: 'I provide cutting-edge AI solutions to help businesses automate tasks, analyze data, and improve decision-making. From machine learning models to intelligent chatbots, my services are tailored to meet your specific needs and drive innovation in your workflows.',
+    href: ''
+  },
+  {
+    num: '07',
+    title: "Chatbots Development",
+    description: 'I specialize in creating custom chatbots tailored to your business needs. Whether for customer support, lead generation, or automating tasks, I design intelligent and user-friendly chatbots that seamlessly integrate with your platforms, ensuring 24/7 engagement and efficiency.',
+    href: ''
+  },
+  {
+    num: '08',
+    title: "Custom ChatGPT's Development",
+    description: 'I specialize in creating custom chatbots tailored to your business needs. Whether for customer support, lead generation, or automating tasks, I design intelligent and user-friendly chatbots that seamlessly integrate with your platforms, ensuring 24/7 engagement and efficiency.',
+    href: ''
+  },
 ];
 
 
