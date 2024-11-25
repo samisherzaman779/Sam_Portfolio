@@ -5,48 +5,74 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtn from "@/components/WorkSliderBtn";
 
 const projects = [
   {
-    num: '01',
-    category: 'frontend',
-    title: 'project 1',
-    description: "This Amazon clone, built with HTML and CSS, replicates the original site's key sections. It showcases my ability to create clean, responsive designs while closely mirroring Amazon's layout.",
-    stack: [{ name: "Html 5" }, { name: "Css 3"}],
+    num: "01",
+    category: "frontend",
+    title: "project 1",
+    description:
+      "This Amazon clone, built with HTML and CSS, replicates the original site's key sections. It showcases my ability to create clean, responsive designs while closely mirroring Amazon's layout.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }],
     Image: "/amazon1.jpg",
     github: "https://github.com/samikhan1622/Amazon-Clone",
     live: "",
   },
   {
-    num: '02',
-    category: 'fullstack',
-    title: 'project 2',
-    description: "A full-stack Todo app built with MongoDB, where users can add tasks that are seamlessly saved in the database. This project demonstrates my ability to integrate front-end and back-end technologies, ensuring data persistence and a smooth user experience.",
-    stack: [{ name: "Next.JS" }, { name: "Tailwind.css" }, { name: "Typescript"}, { name: "Node.JS" }, ],
+    num: "02",
+    category: "fullstack",
+    title: "project 2",
+    description:
+      "A full-stack Todo app built with MongoDB, where users can add tasks that are seamlessly saved in the database. This project demonstrates my ability to integrate front-end and back-end technologies, ensuring data persistence and a smooth user experience.",
+    stack: [
+      { name: "Next.JS" },
+      { name: "Tailwind.css" },
+      { name: "Typescript" },
+      { name: "Node.JS" },
+      { name: "MongoDB" },
+    ],
     Image: "/todo1.jpg",
     github: "https://github.com/samikhan1622/ToDo-App",
-    live: "https://to-do-app-fa1u.vercel.app/"
+    live: "https://to-do-app-fa1u.vercel.app/",
   },
   {
-    num: '03',
-    category: 'fullstack',
-    title: 'project 3',
-    description: 'This portfolio showcases my work as a web developer, featuring projects that demonstrate my skills in front-end and back-end development. It highlights my ability to create responsive designs, build full-stack applications, and solve complex problems with clean, efficient code.',
-    stack: [{ name: "Typescript"}, { name: "Tailwind.css" }, { name: "Next.JS" },  { name: "Node.JS" }, ],
+    num: "03",
+    category: "fullstack",
+    title: "project 3",
+    description:
+      "This portfolio showcases my work as a web developer, featuring projects that demonstrate my skills in front-end and back-end development. It highlights my ability to create responsive designs, build full-stack applications, and solve complex problems with clean, efficient code.",
+    stack: [
+      { name: "Typescript" },
+      { name: "Tailwind.css" },
+      { name: "Next.JS" },
+      { name: "Node.JS" },
+    ],
     Image: "/portfolio1.jpg",
     live: "",
-    github: ""
+    github: "",
   },
   {
-    num: '04',
-    category: 'fullstack',
-    title: 'project 4',
-    description: 'A dynamic e-commerce platform built with PostgreSQL, featuring secure user authentication, seamless product management, and efficient order processing. This project highlights my expertise in database integration, ensuring data integrity and a smooth shopping experience.',
-    stack: [{ name: "Next.JS" }, { name: "Typescript",}, { name: "Tailwind.css" }, { name: "Node.JS" }, ],
+    num: "04",
+    category: "fullstack",
+    title: "project 4",
+    description:
+      "A dynamic e-commerce platform built with PostgreSQL, featuring secure user authentication, seamless product management, and efficient order processing. This project highlights my expertise in database integration, ensuring data integrity and a smooth shopping experience.",
+    stack: [
+      { name: "Next.JS" },
+      { name: "Typescript" },
+      { name: "Tailwind.css" },
+      { name: "Node.JS" },
+      { name: "PostgreSQL" },
+    ],
     Image: "/store1.jpg",
     github: "https://github.com/samikhan1622/samstore",
     live: "https://samstore-peach.vercel.app/",
@@ -56,15 +82,18 @@ const projects = [
 const Work = () => {
   const [projectt, setProjectt] = useState(projects[0]);
 
-  const handleSlideChange = (swiper: { activeIndex: any; }) => {
+  const handleSlideChange = (swiper: { activeIndex: any }) => {
     const currentIndex = swiper.activeIndex;
     setProjectt(projects[currentIndex]);
   };
 
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeInOut"} }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+      }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -78,21 +107,22 @@ const Work = () => {
                 {projectt.category} project
               </h2>
               <p className="text-white/60">{projectt.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-2 sm:gap-4 justify-center sm:justify-start">
                 {projectt.stack.map((item, index) => (
                   <li key={index} className="text-xl text-accent">
                     {item.name}
                     {index !== projectt.stack.length - 1 && ","}
                   </li>
                 ))}
-              </ul> 
+              </ul>
+
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
                 <Link href={projectt.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live project</p>
@@ -104,7 +134,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent"/>
+                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github Repository</p>
@@ -127,7 +157,7 @@ const Work = () => {
                   <div className="h-[460px] relative group flex justify-center items-center bg-primary">
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     <div className="relative w-full h-full">
-                      <Image 
+                      <Image
                         src={projectt.Image}
                         fill
                         className="object-contain"
@@ -137,7 +167,7 @@ const Work = () => {
                   </div>
                 </SwiperSlide>
               ))}
-              <WorkSliderBtn 
+              <WorkSliderBtn
                 containerStyle="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyle="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
@@ -147,7 +177,6 @@ const Work = () => {
       </div>
     </motion.section>
   );
-}
+};
 
 export default Work;
-
