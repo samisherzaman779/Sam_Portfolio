@@ -70,12 +70,16 @@ const Contact = () => {
                   <SelectValue placeholder="Select a service" />
                   <SelectContent>
                     <SelectGroup>
-                      <SelectLabel className="text-xl">
+                      <SelectLabel className="text-xl text-accent">
                         Select a service
                       </SelectLabel>
                       <SelectItem value="est">Web Develepment</SelectItem>
                       <SelectItem value="cst">UI/UX Design</SelectItem>
                       <SelectItem value="mst">Logo Deisgn</SelectItem>
+                      <SelectItem value="sdn">SEO</SelectItem>
+                      <SelectItem value="jkl">Web Scraping</SelectItem>
+                      <SelectItem value="jah">Chatbots Development</SelectItem>
+                      <SelectItem value="yuw">Custom ChatGPT's Development</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </SelectTrigger>
