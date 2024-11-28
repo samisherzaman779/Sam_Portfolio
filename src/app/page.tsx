@@ -23,7 +23,7 @@ const page = () => {
                         </p>
                         {/* btn & socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
-                            <Link href={"/"}>
+                            <Link href={"/assets/myCv.pdf"}>
                             <Button
                                 variant={"outline"}
                                 size={"lg"}
