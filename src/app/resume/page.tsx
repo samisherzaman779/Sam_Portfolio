@@ -21,7 +21,7 @@ import {
   SiOpenai,
   SiGit,
   SiGithub,
-  SiFigma,
+  SiFastapi,
   SiVercel,
   SiNpm,
 } from "react-icons/si";
@@ -189,11 +189,11 @@ const skills = {
     },
     {
       Icon: <SiGithub />,
-      name: "Github",
+      name: "GitHub",
     },
     {
-      Icon: <SiFigma />,
-      name: "Figma",
+      Icon: <SiFastapi />,
+      name: "Fastapi",
     },
     {
       Icon: <SiVercel />,
@@ -221,7 +221,7 @@ const skills = {
     },
     {
       Icon: <SiOpenai />,
-      name: "LLM",
+      name: "LLM's",
     },
   ],
 };

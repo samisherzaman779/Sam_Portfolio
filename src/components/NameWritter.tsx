@@ -10,7 +10,7 @@ const NameWritter = () => {
                 <br className='hidden lg:inline-block' />
                 <Typewriter
                     options={{
-                        strings: ['Sami Sherzaman', 'Web Developer', 'UI/UX Designer'],
+                        strings: ['Sami Sherzaman', 'Agentic AI Engineer', 'Web Developer', 'fullStack Developer'],
                         autoStart: true,
                         loop: true,
                     }}

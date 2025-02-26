@@ -28,7 +28,7 @@ const Info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "TPII, KDA, Mehmoodabad, Karachi, Pakistan ",
+    description: "Mehmoodabad, Karachi, Pakistan",
   },
 ];
 
