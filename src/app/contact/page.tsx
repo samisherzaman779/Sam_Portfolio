@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,28 +14,54 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
+import { toast } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const Info = [
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "+923-0660-39949",
+    icon: <FaPhoneAlt />, title: "Phone", description: "+923-0660-39949",
   },
   {
-    icon: <FaEnvelope />,
-    title: "Email",
-    description: "Samisherzaman779@gmail.com",
+    icon: <FaEnvelope />, title: "Email", description: "samisherzaman779@gmail.com",
   },
   {
-    icon: <FaMapMarkedAlt />,
-    title: "Address",
-    description: "Mehmoodabad, Karachi, Pakistan",
+    icon: <FaMapMarkedAlt />, title: "Address", description: "Mehmoodabad, Karachi, Pakistan",
   },
 ];
 
-import { motion } from "framer-motion";
-
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        toast.success("Email sent successfully!");
+        setFormData({ firstname: "", lastname: "", email: "", phone: "", service: "", message: "" });
+      } else {
+        toast.error("Failed to send email.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong!");
+    }
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -59,10 +86,10 @@ const Contact = () => {
               </p>
               {/* inputs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="FirstName" />
-                <Input type="lastname" placeholder="LastName" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="phone" placeholder="Phone Number" />
+                <Input name="firstname" value={formData.firstname} onChange={handleChange} type="text" placeholder="First Name" />
+                <Input name="lastname" value={formData.lastname} onChange={handleChange} type="text" placeholder="Last Name" />
+                <Input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="Email Address" />
+                <Input name="phone" value={formData.phone} onChange={handleChange} type="text" placeholder="Phone Number" />
               </div>
               {/* select */}
               <Select>
