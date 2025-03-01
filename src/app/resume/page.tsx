@@ -30,7 +30,7 @@ import {
 const about = {
   title: "About Me",
   Description:
-    "Hello, My Name is Sami Sherzaman. And i'm a passionate Web Developer, Crafting efficient code and innovative solutions, I am a software developer dedicated to turning ideas into impactful digital experiences.",
+    "Hello, My Name is Sami Sherzaman. And i'm a passionate Agentic AI Engineer and Web Developer, Crafting efficient code and innovative solutions, I am a software developer dedicated to turning ideas into impactful digital experiences.",
   info: [
     {
       fieldName: "Name",
@@ -99,6 +99,11 @@ const experience = {
       position: "Freelancing",
       duration: "2024 - Present",
     },
+    {
+      company: "Piaic",
+      position: "Agentic Ai Engineer",
+      duration: "2024 - Present",
+    },
   ],
 };
 
@@ -109,6 +114,11 @@ const Education = {
   Description:
     "I completed my basic education at AlHidaya School, where I developed a strong understanding of foundational subjects. After that, I began focusing on web development and software technologies through self-study and online courses. Currently, I am a web developer, continuously enhancing my skills in the field of software development & Artifical Inteligence.",
   items: [
+    {
+      institution: "Piaic",
+      degree: "Agentic AI Engineer",
+      duration: "2024 - Present",
+    },
     {
       institution: "Piaic",
       degree: "Full Stack Web Develpor",

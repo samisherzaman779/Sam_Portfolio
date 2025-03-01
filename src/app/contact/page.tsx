@@ -60,7 +60,8 @@ const Contact = () => {
         toast.success("Email sent successfully!");
         setFormData({ firstname: "", lastname: "", email: "", phone: "", service: "", message: "" });
       } else {
-        toast.error("Failed to send email.");
+        const errorData = await response.json();
+        toast.error(errorData.message || "Failed to send email."); // Error from backend
       }
     } catch (error) {
       toast.error("Something went wrong!");
@@ -171,3 +172,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
