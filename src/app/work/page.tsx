@@ -77,6 +77,40 @@ const projects = [
     github: "https://github.com/samikhan1622/samstore",
     live: "https://samstore-peach.vercel.app/",
   },
+  {
+    num: "05",
+    category: "frontend",
+    title: "project 5",
+    description:
+      "This portfolio showcases my work as a web developer, featuring projects that demonstrate my skills in front-end and back-end development. It highlights my ability to create responsive designs, build full-stack applications, and solve complex problems with clean, efficient code.",
+    stack: [
+      { name: "Next.JS" },
+      { name: "Typescript" },
+      { name: "Tailwind.css" },
+      { name: "Node.JS" },
+    ],
+    Image: "/portfolio2.jpg",
+    github: "https://github.com/samisherzaman779/My-Portfolio",
+    live: "https://my-portfolio-omega-sepia-94.vercel.app/",
+  },
+  {
+    num: "06",
+    category: "fullstack",
+    title: "project 6",
+    description:
+      "A modern blog built with Next.js, TypeScript, Sanity CMS, and AI stacks, delivering fast, scalable, and seamless content. It explores the latest in AI, tech, and innovations, with a clean design and effortless content management for fresh, engaging updates.",
+    stack: [
+      { name: "Next.JS" },
+      { name: "Typescript" },
+      { name: "Tailwind.css" },
+      { name: "Node.JS" },
+      { name: "Sanity" },
+      { name: "AI - ChatGPT" },
+    ],
+    Image: "/my-blog-site.jpg",
+    github: "https://github.com/samisherzaman779/my-blog-site",
+    live: "https://my-blog-site-lake.vercel.app/",
+  },
 ];
 
 const Work = () => {

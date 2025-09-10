@@ -21,14 +21,14 @@ const services = [
   },
   {
     num: '03',
-    title: "Logo Design",
-    description: 'I create unique and memorable logos that effectively represent your brand’s identity. My designs focus on blending creativity with strategic thinking to deliver a logo that stands out and communicates your brand’s essence..',
+    title: "Frontend Development",
+    description: 'i offer expert frontend development services to create responsive and dynamic web applications. Utilizing the latest technologies such as React, Next.js, and TypeScript, I ensure seamless user experiences across all devices. My focus is on performance optimization, accessibility, and modern design principles to bring your vision to life.',
     href: ''
   },
   {
     num: '04',
-    title: "SEO",
-    description: 'I provide tailored SEO strategies to enhance your website’s visibility and search engine ranking. My approach includes keyword research, on-page optimization, and performance tracking to drive organic traffic and improve your online presence.',
+    title: "Full Stack Development ",
+    description: 'I provide comprehensive full-stack development services, combining both front-end and back-end expertise to deliver complete web solutions. From designing user-friendly interfaces to building robust server-side applications, I ensure seamless integration and optimal performance across the entire technology stack.',
     href: ''
   },
   {
@@ -45,7 +45,7 @@ const services = [
   },
   {
     num: '07',
-    title: "Chatbots Development",
+    title: "Agentic AI Chatbot Development",
     description: 'I specialize in creating custom chatbots tailored to your business needs. Whether for customer support, lead generation, or automating tasks, I design intelligent and user-friendly chatbots that seamlessly integrate with your platforms, ensuring 24/7 engagement and efficiency.',
     href: ''
   },
@@ -53,6 +53,18 @@ const services = [
     num: '08',
     title: "Custom ChatGPT's Development",
     description: 'I specialize in creating custom chatbots tailored to your business needs. Whether for customer support, lead generation, or automating tasks, I design intelligent and user-friendly chatbots that seamlessly integrate with your platforms, ensuring 24/7 engagement and efficiency.',
+    href: ''
+  },
+  {
+    num: '09',
+    title: "N8N Automation Services",
+    description: 'I specialize in creating custom chatbots tailored to your business needs. Whether for customer support, lead generation, or automating tasks, I design intelligent and user-friendly chatbots that seamlessly integrate with your platforms, ensuring 24/7 engagement and efficiency.',
+    href: ''
+  },
+  {
+    num: '10',
+    title: "Python Development Services",
+    description: 'With expertise in Python, I offer robust development services to build scalable and efficient applications. From web development using frameworks like Django and Flask to data analysis and automation, I deliver tailored solutions that meet your specific needs and drive business growth.',
     href: ''
   },
 ];

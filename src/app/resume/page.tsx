@@ -7,6 +7,8 @@ import {
   FaReact,
   FaPython,
   FaNodeJs,
+  FaBootstrap,
+  FaGitAlt,
 } from "react-icons/fa";
 
 import {
@@ -20,10 +22,12 @@ import {
   SiLangchain,
   SiOpenai,
   SiGit,
+  SiN8N,
   SiGithub,
   SiFastapi,
   SiVercel,
   SiNpm,
+  SiFlask,
 } from "react-icons/si";
 
 // about data
@@ -82,7 +86,7 @@ const experience = {
     {
       company: "TechHunt-Solutions-Inc",
       position: "Front-End Develpor Intern",
-      duration: "2023 - Present",
+      duration: "2024 - 2024",
     },
     {
       company: "Piaic",
@@ -104,6 +108,11 @@ const experience = {
       position: "Agentic Ai Engineer",
       duration: "2024 - Present",
     },
+    {
+      company: "Codified Digital",
+      position: "Machine Learning Develpor",
+      duration: "2025 - Present",
+    },
   ],
 };
 
@@ -117,6 +126,16 @@ const Education = {
     {
       institution: "Piaic",
       degree: "Agentic AI Engineer",
+      duration: "2024 - Present",
+    },
+    {
+      institution: "Piaic",
+      degree: "N8N Automation Developer",
+      duration: "2024 - Present",
+    },
+    {
+      institution: "Piaic",
+      degree: "Machine Learning Developer",
       duration: "2024 - Present",
     },
     {
@@ -182,6 +201,10 @@ const skills = {
       name: "Tailwind.css",
     },
     {
+      Icon: <FaBootstrap />,
+      name: "Bootstrap",
+    },
+    {
       Icon: <SiTypescript />,
       name: "Typescript",
     },
@@ -233,6 +256,15 @@ const skills = {
       Icon: <SiOpenai />,
       name: "LLM's",
     },
+    {
+      Icon: <SiFlask />,
+      name: "Flask",
+    },
+    {
+      Icon: <SiN8N />,
+      name: "N8N Automation",
+    },
+  
   ],
 };
 

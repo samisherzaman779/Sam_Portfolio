@@ -1,43 +1,46 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { firstname, lastname, email, phone, service, message } = await req.json();
-    const name = `${firstname} ${lastname}`;
+    const { name, email, phone, service, message } = await req.json();
 
-    console.log("Received Data:", name, email, message, service);
-
-    if (!firstname || !lastname || !email || !message) {
-      return NextResponse.json({ success: false, message: "All fields are required!" }, { status: 400 });
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: "Please fill all required fields" },
+        { status: 400 }
+      );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ success: false, message: "Invalid email format!" }, { status: 400 });
-    }
-
-    // optional:
-    const phoneRegex = /^\d{10,}$/; // Basic example: 10 or more digits
-    if (!phoneRegex.test(phone)) {
-        return NextResponse.json({ success: false, message: "Invalid phone format!" }, { status: 400 });
-    }
-
-    const data = await resend.emails.send({
-      from: "samisherzaman779@gmail.com", // Make sure this is verified in Resend!
-      to: process.env.EMAIL_USER as string, // Where you want to receive the emails
-      subject: `New Contact Form Submission from ${name} for ${service}`,
-      html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Phone:</b> ${phone}</p><p><b>Message:</b> ${message}</p><p><b>Service:</b> ${service}</p>`,
+    const transporter = nodemailer.createTransport({
+      service: "gmail", // agar gmail use kar rahe ho
+      auth: {
+        user: process.env.EMAIL_USER, // ✅ apna gmail ya domain email
+        pass: process.env.EMAIL_PASS, // ✅ app password ya SMTP password
+      },
     });
 
-    return NextResponse.json({ success: true, message: "Email sent successfully!", data }, { status: 200 });
-  } catch (error) {
-    console.error("Email sending error:", error);
+    const mailOptions = {
+      from: process.env.EMAIL_USER, // sender
+      to: process.env.RECEIVER_EMAIL || process.env.EMAIL_USER, // ✅ jahan email receive karna hai
+      subject: `New Contact Form Submission from ${name}`,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone || "Not provided"}
+        Service: ${service || "Not specified"}
+        Message: ${message}
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    return NextResponse.json({ success: true }, { status: 200 });
+  } catch (error: any) {
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { success: false, message: "Email sending failed!", error: (error as Error).message },
-      { status: 500 },
+      { error: "Failed to send message" },
+      { status: 500 }
     );
   }
 }
