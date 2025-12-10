@@ -111,6 +111,23 @@ const projects = [
     github: "https://github.com/samisherzaman779/my-blog-site",
     live: "https://my-blog-site-lake.vercel.app/",
   },
+  {
+    num: "07",
+    category: "fullstack",
+    title: "project 7",
+    description:
+      "A modern blog built with Next.js, TypeScript, Sanity CMS, and AI stacks, delivering fast, scalable, and seamless content. It explores the latest in AI, tech, and innovations, with a clean design and effortless content management for fresh, engaging updates.",
+    stack: [
+      { name: "Next.JS" },
+      { name: "Typescript" },
+      { name: "Tailwind.css" },
+      { name: "Node.JS" },
+      { name: "NodeMailer" },
+    ],
+    Image: "/bijli-master.jpg",
+    github: "https://github.com/samisherzaman779/bijli-masters",
+    live: "https://bijli-masters.vercel.app/",
+  },
 ];
 
 const Work = () => {
