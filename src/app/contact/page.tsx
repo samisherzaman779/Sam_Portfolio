@@ -22,7 +22,7 @@ import { motion } from "framer-motion";
 const Info = [
   { icon: <FaPhoneAlt />, title: "Phone", description: "+923-0660-39949" },
   { icon: <FaEnvelope />, title: "Email", description: "samisherzaman779@gmail.com" },
-  { icon: <FaMapMarkedAlt />, title: "Address", description: "Mehmoodabad, Karachi, Pakistan" },
+  { icon: <FaMapMarkedAlt />, title: "Address", description: "Karachi, Pakistan" },
 ];
 
 const Contact = () => {
